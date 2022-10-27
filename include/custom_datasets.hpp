@@ -1,9 +1,9 @@
 #ifdef USE_IRIS
-#include<iris.hpp>
+#include<custom-datasets/iris.hpp>
 #endif
 #ifdef USE_CMNIST
-#include<cmnist.hpp>
+#include<custom-datasets/cmnist.hpp>
 #endif
 #ifdef USE_FP2
-#include<fp2.hpp>
+#include<custom-datasets/fp2.hpp>
 #endif
