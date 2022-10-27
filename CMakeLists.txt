@@ -8,7 +8,7 @@ include(FetchContent)
 
 
 
-add_library(custom_datasets INTERFACE include/customs_datasets.hpp)
+add_library(custom_datasets INTERFACE include/custom_datasets.hpp)
 
 if(NOT DATASET)
 	set(DATASET "IRIS" CACHE STRING "IRIS CMNIST FP2")
