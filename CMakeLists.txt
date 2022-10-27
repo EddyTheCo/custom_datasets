@@ -13,7 +13,7 @@ add_library(custom_datasets INTERFACE include/custom_datasets.hpp)
 if(NOT DATASET)
 	set(DATASET "IRIS" CACHE STRING "IRIS CMNIST FP2")
 	message(STATUS "DATASET not set using default ${DATASET}")
-endif(NOT MODEL)
+endif(NOT DATASET)
 
 
 FetchContent_Declare(
@@ -22,7 +22,7 @@ FetchContent_Declare(
 	GIT_TAG main
 	)
 FetchContent_MakeAvailable(${DATASET})
-target_compile_definitions(USE_${DATASET} PRIVATE USE_${DATASET})
+target_compile_definitions(custom_datasets INTERFACE USE_${DATASET})
 target_link_libraries(custom_datasets INTERFACE  ${DATASET})
 
 target_include_directories(custom_datasets INTERFACE  $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
