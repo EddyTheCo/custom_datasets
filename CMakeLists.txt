@@ -8,7 +8,10 @@ include(FetchContent)
 
 add_library(custom_datasets INTERFACE include/custom_datasets.hpp)
 
-
+if(NOT CUSTOM_DATASETS)
+       set(CUSTOM_DATASETS "IRIS" CACHE STRING "IRIS CMNIST FP2")
+       message(STATUS "CUSTOM_DATASETS not set using default ${CUSTOM_DATASETS}")
+endif(NOT CUSTOM_DATASETS)
 
 foreach(DATASET ${CUSTOM_DATASETS})
 	message(STATUS "Loading  dataset ${DATASET}")
