@@ -6,14 +6,8 @@ project(custom_datasets VERSION 0.1 DESCRIPTION "custom torch datasets" LANGUAGE
 
 include(FetchContent)
 
-
-
 add_library(custom_datasets INTERFACE include/custom_datasets.hpp)
 
-if(NOT CUSTOM_DATASETS)
-	set(CUSTOM_DATASETS "IRIS;FP2" CACHE STRING "IRIS CMNIST FP2")
-	message(STATUS "CUSTOM_DATASETS not set using default ${CUSTOM_DATASETS}")
-endif(NOT CUSTOM_DATASETS)
 
 
 foreach(DATASET ${CUSTOM_DATASETS})
