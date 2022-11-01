@@ -6,7 +6,7 @@ project(custom_datasets VERSION 0.1 DESCRIPTION "custom torch datasets" LANGUAGE
 
 include(FetchContent)
 
-add_library(custom_datasets INTERFACE include/custom_datasets.hpp)
+add_library(custom_datasets INTERFACE )
 
 if(NOT CUSTOM_DATASETS)
        set(CUSTOM_DATASETS "IRIS" CACHE STRING "IRIS CMNIST FP2")
