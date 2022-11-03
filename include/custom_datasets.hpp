@@ -7,3 +7,7 @@
 #ifdef USE_FP2
 #include<custom-datasets/fp2.hpp>
 #endif
+
+namespace custom_models{
+	namespace datasets{
+	}}
