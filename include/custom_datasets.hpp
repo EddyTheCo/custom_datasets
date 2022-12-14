@@ -4,8 +4,8 @@
 #ifdef USE_CMNIST
 #include<custom-datasets/cmnist.hpp>
 #endif
-#ifdef USE_FP2
-#include<custom-datasets/fp2.hpp>
+#ifdef USE_FPX
+#include<custom-datasets/fpx.hpp>
 #endif
 
 namespace custom_models{
